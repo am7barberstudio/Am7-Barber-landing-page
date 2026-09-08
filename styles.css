@@ -203,6 +203,19 @@ h1 em {
   color: #ffffff;
 }
 
+/* Due sezioni scure consecutive si fondono in un unico blocco nero: una
+   sottile riga di stacco, larga quanto la colonna di contenuto, le separa.
+   Stessa filatura usata da .hero__meta e dal footer. */
+.section--dark + .section--dark::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: max(var(--page-pad), calc((100% - var(--content-max)) / 2));
+  left: max(var(--page-pad), calc((100% - var(--content-max)) / 2));
+  height: 1px;
+  background: var(--slate);
+}
+
 .eyebrow {
   margin-bottom: 16px;
   font-size: .7rem;

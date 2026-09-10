@@ -426,6 +426,10 @@ h1 em {
   align-items: start;
 }
 
+.bw-about-craft--story-only {
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .bw-about-craft__media {
   aspect-ratio: 4 / 5;
   max-height: 520px;
